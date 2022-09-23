@@ -49,7 +49,7 @@ np.random.shuffle(b_files)
 dp_min, dp_max = 0.005, 0.3
 dt_min, dt_max = 0.0005, 0.005
 fp_min, fp_max = -0.00, 0.7
-f0_min, f0_max = 0.7, 1.3
+f0_min, f0_max = 0, 3.0  # 0.7, 1.3
 
 
 class TestSet(torch.utils.data.Dataset):
