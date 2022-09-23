@@ -288,7 +288,7 @@ def train():
             loss_g = loss_g_rec + loss_g_fake
 
             # outputs_rec_syn, ivim_pre_syn = g(syn_x)
-            loss_G = loss_rec + 1 * loss_p  # + 1e-4 * loss_g
+            loss_G = loss_rec + 1 * loss_p + 1e-4 * loss_g
 
             optimizer_g.zero_grad()  # 梯度置零，因为反向传播过程中梯度会累加上一次循环的梯度
             loss_G.backward()  # retain_graph=True
